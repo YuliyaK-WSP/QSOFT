@@ -1,0 +1,229 @@
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    src: url(fonts/Roboto-Medium.ttf);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #E5E5E5;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    position: relative;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+    &__inner {
+        display: flex;
+        height: 80px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        display: block;
+        width: 24%;
+        height: 30.32px;
+        background-image: url(images/origami-logo.png);
+        background-repeat: no-repeat;
+    }
+    &__search {
+        border: 1px solid #ccc;
+        display: flex;
+        border-radius: 2px;
+        align-items: center;
+        width: 56%;
+        height: 40px;
+    }
+    &__sing {
+        height: 100%;
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+        border-left: 1px solid #EBEBF1;
+        ;
+        &__text {
+            text-decoration: none;
+            color: #768298;
+            font-size: 14px;
+        }
+        &__img {
+            display: block;
+            margin-left: 10px;
+            width: 40px;
+            height: 40px;
+            background-image: url(images/Ellipse.png);
+        }
+    }
+}
+
+.section {
+    &__subtitle {
+        font-size: 36px;
+        text-transform: uppercase;
+    }
+    &__cards {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        padding: 0.5% 0.5% 0 0.5%;
+        &__item {
+            height: 120px;
+            width: 270px;
+            border: 1px solid #768298;
+            margin: 0 0 16px 20px;
+            display: inline-block;
+            border-radius: 5px;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+            &:hover {
+                background-color: #ffffff;
+            }
+            &__img {
+                width: 50%;
+                height: 120px;
+                margin: 0 auto;
+                background-position: center center;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+
+.img__henk {
+    background-image: url(images/henk.png);
+}
+
+.img__jonh {
+    background-image: url(images/john.png);
+}
+
+.img__mac {
+    background-image: url(images/Mac.png);
+}
+
+.img__ikea {
+    background-image: url(images/ikea.png);
+}
+
+.img__reebok {
+    background-image: url(images/reebok.png);
+}
+
+.img__nike {
+    background-image: url(images/nike.png);
+}
+
+.img__cater {
+    background-image: url(https://eurofilter.net/lp/Caterpillar.png);
+}
+
+[type='search'] {
+    border: none;
+    outline: none;
+}
+
+.fas.fa-search {
+    color: #ccc;
+}
+
+input[type=text]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=text]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+.header__searchng__mobil {
+    display: none;
+}
+
+@media (min-width: 1025px) {
+    header {
+        width: 100%;
+    }
+}
+
+@media(min-width:481px) and (max-width:768px) {
+    .search {
+        width: 344px;
+    }
+    .section__cards {
+        flex-direction: column;
+    }
+    .cards-item:nth-child(3n+2) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (min-width:0px) and(max-width:480px) {
+    .header__search {
+        display: none;
+    }
+    .header {
+        width: 100%;
+        &__sing {
+            border-left: none;
+        }
+        &__searchng {
+            position: relative;
+            &__mobil {
+                border: 1px solid #ccc;
+                border-radius: 2px;
+                display: flex;
+                align-items: center;
+                width: 375px;
+                height: 40px;
+            }
+        }
+    }
+    .header__sing__text {
+        display: none;
+    }
+    .header__sing__img {
+        width: 24px;
+        height: 24px;
+        background-size: contain;
+        background-image: url(images/profile.png);
+    }
+    .section__subtitle {
+        font-size: 28px;
+    }
+    .section__cards__item {
+        flex-direction: column;
+    }
+    .cards-item:nth-child(2n+2) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
