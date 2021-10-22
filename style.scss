@@ -79,18 +79,15 @@ body {
     }
     &__cards {
         display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
         padding: 0.5% 0.5% 0 0.5%;
         &__item {
             height: 120px;
             width: 270px;
             border: 1px solid #768298;
-            margin: 0 0 16px 20px;
+            margin: 0 10px 10px 0px;
             display: inline-block;
             border-radius: 5px;
             text-align: center;
-            position: relative;
             cursor: pointer;
             &:hover {
                 background-color: #ffffff;
@@ -132,7 +129,7 @@ body {
 }
 
 .img__cater {
-    background-image: url(https://eurofilter.net/lp/Caterpillar.png);
+    background-image: url(images/cater.png);
 }
 
 [type='search'] {
@@ -167,22 +164,37 @@ input[type="search"]::-webkit-search-results-decoration {
     display: none;
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 769px) and(max-width: 900px) {
     header {
         width: 100%;
     }
+    .section {
+        &__cards {
+            &__item {
+                flex-direction: column;
+                width: 230px;
+                margin: 0 20px 20px 0px;
+            }
+        }
+    }
 }
 
-@media(min-width:481px) and (max-width:768px) {
+@media(min-width:500px) and (max-width:768px) {
     .search {
         width: 344px;
-    }
-    .section__cards {
-        flex-direction: column;
     }
     .cards-item:nth-child(3n+2) {
         margin-left: 0;
         margin-right: 0;
+    }
+    .section {
+        &__cards {
+            &__item {
+                flex-direction: column;
+                width: 230px;
+                margin: 0px 20px 20px 0;
+            }
+        }
     }
 }
 
@@ -192,6 +204,10 @@ input[type="search"]::-webkit-search-results-decoration {
     }
     .header {
         width: 100%;
+        &__logo {
+            width: 135px;
+            display: flex;
+        }
         &__sing {
             border-left: none;
         }
@@ -219,8 +235,14 @@ input[type="search"]::-webkit-search-results-decoration {
     .section__subtitle {
         font-size: 28px;
     }
-    .section__cards__item {
-        flex-direction: column;
+    .section {
+        &__cards {
+            &__item {
+                flex-direction: column;
+                width: 375px;
+                margin: 0 0 10px;
+            }
+        }
     }
     .cards-item:nth-child(2n+2) {
         margin-left: 0;
