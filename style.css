@@ -18,7 +18,8 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1230px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
@@ -48,7 +49,7 @@ body {
 
 .header__logo {
   display: block;
-  width: 24%;
+  width: 135.04px;
   height: 30.32px;
   background-image: url(images/origami-logo.png);
   background-repeat: no-repeat;
@@ -63,7 +64,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 56%;
+  width: 52.98%;
   height: 40px;
 }
 
@@ -190,9 +191,6 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 @media (min-width: 769px) and (max-width: 900px) {
-  header {
-    width: 100%;
-  }
   .section__cards__item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -205,7 +203,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 @media (min-width: 500px) and (max-width: 768px) {
   .search {
-    width: 344px;
+    max-width: 43%;
   }
   .cards-item:nth-child(3n+2) {
     margin-left: 0;
@@ -217,22 +215,13 @@ input[type="search"]::-webkit-search-results-decoration {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 230px;
-    margin: 0px 20px 20px 0;
+    margin: 0px 10px 10px 0;
   }
 }
 
 @media (min-width: 0px) and (max-width: 480px) {
   .header__search {
     display: none;
-  }
-  .header {
-    width: 100%;
-  }
-  .header__logo {
-    width: 135px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
   .header__sing {
     border-left: none;
@@ -249,7 +238,7 @@ input[type="search"]::-webkit-search-results-decoration {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 375px;
+    width: 100%;
     height: 40px;
   }
   .header__sing__text {
@@ -269,8 +258,9 @@ input[type="search"]::-webkit-search-results-decoration {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 375px;
-    margin: 0 0 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
   }
   .cards-item:nth-child(2n+2) {
     margin-left: 0;
